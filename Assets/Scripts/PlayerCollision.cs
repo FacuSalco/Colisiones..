@@ -15,16 +15,16 @@ public class PlayerCollision : MonoBehaviour
     {
         if (transform.position.y < 0)
         {
-            transform.position = new Vector3(0, 0.5f, 0);
+            transform.position = new Vector3(0, 0.5f, 0); //vuelve a la poscion 0 cuando se cae de la plataforma
         }
     }
 
     void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.name == "DeathWall")
+        if(col.gameObject.name == "DeathWall")//si toca el objecto llamado "DeathWall"...
         {
             //Destroy(gameObject);
-            transform.position  = new Vector3(0, 0.5f, 0);
+            transform.position  = new Vector3(0, 0.5f, 0); //...vuelve a la pocision 0
         }
 
         
